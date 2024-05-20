@@ -1,0 +1,106 @@
+@import './styles/base.scss';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 5vmin;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: blue;
+}
+
+h1 {
+  margin: 0;
+  transition: all .3s;
+}
+
+// h1:hover {
+//   font-size: 10vw
+// }
+
+small {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+ul {
+  margin: 1rem 0;
+}
+
+.ball {
+  height: 5vmin;
+  width: 5vmin;
+  left: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+  background: red;
+  --duration: 1s;
+  --stagger: 0.5s;
+  --interval: calc(var(--duration) - var(--stagger));
+  animation: move-right var(--duration) calc(var(--interval) * var(--i)) both ;
+
+}
+
+
+
+@keyframes move-right {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(25vw);
+  }
+}
+
+
+// @keyframes  slide-right {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(50vw);
+//   } 
+// }
+
+
+
+
+
+// @keyframes move-like-a-sqaure {
+//   from,to{
+//     transform: none
+//   }
+  
+//   50% {
+//     transform: scale(2);
+//    }
+  
+// }
+
+
+
+// @keyframes color-change {
+//    from {
+//     background-color: red;
+//    }
+//    to {
+//     background-color: green;
+//    }
+// }
+
+// .ball:hover {
+//   transition-duration: 1s, 3s ;// duration of the transition
+//   background: blue;
+//   transform: scale(2);
+// }
+
+
+// @keyframes slide-right {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(50vw);
+//   }
+// }
